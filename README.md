@@ -1,3 +1,13 @@
+CSCI 1300 (Spring 2013) Syllabus
+==================
+
+This describes _Introduction to Computing_, sometimes known as CSCI
+1300, at the University of Colorado, Boulder. The course home page is
+actually a GitHub repository located here:
+
+[https://github.com/johnsogg/cs1300](https://github.com/johnsogg/cs1300)
+
+
 People
 =======
 
@@ -22,7 +32,8 @@ Course Purpose
 The purpose of this class is to give everybody involved the
 opportunity to learn how to program. This is _not_ a "weed out" class
 where we run you through the computer science gauntlet, causing sleep
-deprivation or mental anguish. (That comes later.)
+deprivation or mental marathons. (No guarantees about subsequent
+courses, however.)
 
 No, the goal here is to give everybody the chance to learn how to
 program and decide if this is a profession/skill/avocation that they
@@ -65,13 +76,13 @@ your homework grade. This is meant to lure you into programming the
 same general idea in several languages to give you a sense of how the
 languages differ.
 
-Collaboration is strongly encouraged. If you work together or find a
-web site with code that you learn from, _you must indicate the
-relevant people and web sites in the source code you submit_. Further,
-if you do work with other people, or find code on other web sites,
-_you must type all the code yourself._ Obviously I can't police
-copy/paste, so please realize this is for your own good. Trust me,
-I've been around the block once or twice.
+**Collaboration on homework assignments is strongly encouraged.** If you
+work together or find a web site with code that you learn from, _you
+must indicate the relevant people and web sites in the source code you
+submit_. Further, if you do work with other people, or find code on
+other web sites, _you must type all the code yourself._ Obviously I
+can't police copy/paste, so please realize this is for your own
+good. Trust me, I've been around the block once or twice.
 
 Homework assignment descriptions and file downloads will appear in the
 course GitHub repository over time. I will try to make them available
