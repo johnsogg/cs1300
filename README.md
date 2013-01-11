@@ -29,11 +29,11 @@ People
 Course Purpose 
 =======
 
-The purpose of this class is to give everybody involved the
-opportunity to learn how to program. This is _not_ a "weed out" class
-where we run you through the computer science gauntlet, causing sleep
-deprivation or mental marathons. (No guarantees about subsequent
-courses, however.)
+The purpose of this class is to give everybody the opportunity to
+learn how to program. This is _not_ a "weed out" class where we run
+you through the computer science gauntlet, causing sleep deprivation
+or setting you off on strange mental marathons. (No guarantees about
+subsequent courses, however.)
 
 No, the goal here is to give everybody the chance to learn how to
 program and decide if this is a profession/skill/avocation that they
@@ -45,7 +45,9 @@ Computer programming, and the more general idea of computational
 thinking, is rapidly becoming a basic literacy skill. By the end of
 this course (even if you don't continue with more advanced computer
 science courses) you should be able to pick up new languages, tools,
-technologies, and make them do tricks.
+technologies, and make them do tricks. You will also be able to have
+more intelligent, informed conversations with professional software
+engineers, interaction designers, and hackers.
 
 Grading and Course Structure
 =======
@@ -53,9 +55,9 @@ Grading and Course Structure
 There are three components to your final grade: Homeworks, tests, and
 the final project. Each is worth 1/3 of your grade. Homeworks are due
 and tests are given on Fridays (except for the one test immediately
-before Spring Break, proving I do have a heart). Check the schedule.
+before Spring Break, proving I do have a heart). [Check the schedule.](schedule.md)
 
-Homeworks
+Homeworks (90 points possible)
 --------
 
 There are nine homework assignments. Each is 10 points, for a total of
@@ -88,7 +90,7 @@ Homework assignment descriptions and file downloads will appear in the
 course GitHub repository over time. I will try to make them available
 far in advance so you can work ahead if you like.
 
-Tests
+Tests (90 points possible)
 -----
 
 There are three tests that happen during normal lecture periods. They
@@ -103,7 +105,7 @@ will I. Do not cheat._
 Specific information about tests will appear in the course GitHub
 repository about a week before they happen.
 
-Project
+Project (90 points possible)
 -------
 
 Programming is a practical art. The project gives you a chance to do
@@ -112,6 +114,10 @@ space for more information, because we haven't figured out the
 parameters for this yet. In the meantime, be thinking about cool
 things you can do with code, and you might be able to do it for your
 project.
+
+We realize that having 1/3 of your grade come at the very end is
+nerve-wracking. Therefore, grading for the project will be fairly
+lenient. Watch this space.
 
 Reading Material
 ==========
