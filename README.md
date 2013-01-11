@@ -151,7 +151,7 @@ _C++ Language Tutorial_
 
 _Learn C The Hard Way_ 
 
-:: [http://c.learncodethehardway.org/](http://www.cplusplus.com/doc/tutorial/)
+:: [http://c.learncodethehardway.org/](http://c.learncodethehardway.org/)
 
 _Think Java (How To Think Like A Computer Scientist)_
 
