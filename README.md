@@ -55,7 +55,7 @@ Grading and Course Structure
 There are three components to your final grade: Homeworks, tests, and
 the final project. Each is worth 1/3 of your grade. Homeworks are due
 and tests are given on Fridays (except for the one test immediately
-before Spring Break, proving I do have a heart). [Check the schedule.](schedule.md)
+before Spring Break, proving I do have a heart). Check the schedule.
 
 Homeworks (90 points possible)
 --------
