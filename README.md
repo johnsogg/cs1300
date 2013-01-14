@@ -25,6 +25,7 @@ People
 
 * Matthias Sainz - Matthias.Sainz@colorado.edu
 * Noelle Renee Beaujon - Noelle.Beaujon@colorado.edu
+* Roberto Kingsley - roberto.kingsley@colorado.edu
 
 Course Purpose 
 =======
