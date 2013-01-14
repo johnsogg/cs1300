@@ -9,7 +9,7 @@ actually a GitHub repository located here:
 
 
 People
-=======
+------
 
 *Instructor:* Gabe Johnson - gabe.johnson@gmail.com
 
@@ -26,6 +26,12 @@ People
 * Matthias Sainz - Matthias.Sainz@colorado.edu
 * Noelle Renee Beaujon - Noelle.Beaujon@colorado.edu
 * Roberto Kingsley - roberto.kingsley@colorado.edu
+
+Space/Time Coordinates for Main Lecture
+--------
+
+Where: Math 100
+When: M-W-F 1:00--1:50pm
 
 Course Purpose 
 =======
