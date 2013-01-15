@@ -80,6 +80,10 @@ like this:
 
 ![](https://raw.github.com/johnsogg/cs1300/master/recitations/img/virt-box-7.png)
 
+If the little down-arrow is glowing green, that means VirtualBox is
+capturing your keyboard input. If it is off, you can use the host key
+to alt-tab or command-tab.
+
 At last, your virtual Ubuntu computer has booted. I opened a few
 windows to make this screenshot more interesting. You will see
 something that looks like this:
