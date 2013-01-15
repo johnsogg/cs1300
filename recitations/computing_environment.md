@@ -24,6 +24,13 @@ from the CS department Moodle. The Moodle is a password protected
 thing, so you'll need to create an account, then install a BitTorrent
 client to get the image. That web page explains all of that.
 
+__VERY IMPORTANT INFORMATION ABOUT BIT TORRENT:__ The BitTorrent and the 
+uTorrent clients _install junk_ on your computer. If anybody knows of a 
+Windows bit torrent client that doesn't do socially dumb things, please 
+email me so I can recommend a good alternative.
+
+On OSX I can definitely recommend _Transmission_.
+
 Alternately, if you want to help kill the department file server, you
 can use the
 [direct link](http://foundation.cs.colorado.edu/files/CU-CS-VM-S13-v1.1.ova)
@@ -63,9 +70,19 @@ ahead and boot the machine by clicking _Start_.
 While booting, several dialogs will pop up with sort of confusing
 information about how the mouse and keyboard are captured by the
 VM. All this means is that if you want to "get out" of the VM (so you
-can use your other applications) you'll have to use the mouse. If you
-figure out how to use the keyboard to alt-tab away, let me know so I
-can update this document.
+can use your other applications) you'll have to use the mouse.
+
+Hat tip to Tatyana: there is a 'host key' that acts like a toggle
+button. On OSX, this is the command key. If you press and release the
+host key, it changes the capture mode. There is a graphic at the
+bottom right corner that shows you which mode it is in. It looks
+like this:
+
+![](https://raw.github.com/johnsogg/cs1300/master/recitations/img/virt-box-7.png)
+
+If the little down-arrow is glowing green, that means VirtualBox is
+capturing your keyboard input. If it is off, you can use the host key
+to alt-tab or command-tab.
 
 At last, your virtual Ubuntu computer has booted. I opened a few
 windows to make this screenshot more interesting. You will see
