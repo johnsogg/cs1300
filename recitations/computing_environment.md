@@ -70,9 +70,15 @@ ahead and boot the machine by clicking _Start_.
 While booting, several dialogs will pop up with sort of confusing
 information about how the mouse and keyboard are captured by the
 VM. All this means is that if you want to "get out" of the VM (so you
-can use your other applications) you'll have to use the mouse. If you
-figure out how to use the keyboard to alt-tab away, let me know so I
-can update this document.
+can use your other applications) you'll have to use the mouse.
+
+Hat tip to Tatyana: there is a 'host key' that acts like a toggle
+button. On OSX, this is the command key. If you press and release the
+host key, it changes the capture mode. There is a graphic at the
+bottom right corner that shows you which mode it is in. It looks
+like this:
+
+![](https://raw.github.com/johnsogg/cs1300/master/recitations/img/virt-box-7.png)
 
 At last, your virtual Ubuntu computer has booted. I opened a few
 windows to make this screenshot more interesting. You will see
