@@ -24,6 +24,13 @@ from the CS department Moodle. The Moodle is a password protected
 thing, so you'll need to create an account, then install a BitTorrent
 client to get the image. That web page explains all of that.
 
+__VERY IMPORTANT INFORMATION ABOUT BIT TORRENT:__ The BitTorrent and the 
+uTorrent clients _install junk_ on your computer. If anybody knows of a 
+Windows bit torrent client that doesn't do socially dumb things, please 
+email me so I can recommend a good alternative.
+
+On OSX I can definitely recommend _Transmission_.
+
 Alternately, if you want to help kill the department file server, you
 can use the
 [direct link](http://foundation.cs.colorado.edu/files/CU-CS-VM-S13-v1.1.ova)
