@@ -8,10 +8,10 @@ actually a GitHub repository located here:
 [https://github.com/johnsogg/cs1300](https://github.com/johnsogg/cs1300)
 
 
-People
+People and Office Hours
 ------
 
-*Instructor:* Gabe Johnson - gabe.johnson@gmail.com
+*Instructor:* Gabe Johnson - gabe.johnson@gmail.com - Office Hours 11--2:30 Tuesday/Thursday
 
 *TAs:*
 
