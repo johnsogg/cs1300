@@ -127,6 +127,14 @@ We realize that having 1/3 of your grade come at the very end is
 nerve-wracking. Therefore, grading for the project will be fairly
 lenient. Watch this space.
 
+Plagiarism Detection
+----------
+
+You might be interested to know that
+[this](http://theory.stanford.edu/~aiken/moss/) is a thing. Remember
+to type your own homework assignments and _attribute any collaborators
+or source web sites._
+
 Reading Material
 ==========
 
