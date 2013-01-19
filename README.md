@@ -135,11 +135,11 @@ You might be interested to know that
 to type your own homework assignments and _attribute any collaborators
 or source web sites._
 
-Reading Material
+Reading / Viewing Material
 ==========
 
 There is no required book for this course. Textbooks are absurdly
-expensive, and there are a number of high-quality introductory texts
+expensive, and there are a number of high-quality introductory texts (and videos!)
 available online. Learning to program is best done by writing lots and
 lots of code. So: I will suggest readings from these books throughout
 the course, but _none of it will sink in unless you write code to
@@ -160,6 +160,10 @@ author money if you want a nicer version.
 _Learn Python the Hard Way_ 
 
 :: [http://learnpythonthehardway.org/](http://learnpythonthehardway.org/)
+
+_thenewboston's YouTube Python Tutorials_ (thanks Sean for the tip)
+
+:: [http://www.youtube.com/course?list=ECEA1FEF17E1E5C0DA](http://www.youtube.com/course?list=ECEA1FEF17E1E5C0DA)
   
 _C++ Language Tutorial_
 
