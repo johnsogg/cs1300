@@ -83,18 +83,18 @@ __For your homework, the only requirement is that it outputs text to
 the console.__
 
 To turn in your assignment, you will use the RetroGrade
-system. __Check back here for information on RetroGrade. We are still
-getting it set up. We should have something going before next
-Tuesday.__
+system. You may log in to RetroGrade at the following URL:
+
+[http://retrograde.cs.colorado.edu/](http://retrograde.cs.colorado.edu/)
 
 In order for the grading system to work, you will need to make sure
 your file is named correctly. You can turn your homework in using
 whichever programming language you want. The file names that we accept
 are:
 
-For __Python__: hello.py
-For __C++__: hello.cpp
-For __Java__: hello.java
+- For __Python__: hello.py
+- For __C++__: hello.cpp
+- For __Java__: hello.java
 
 We've provided simple files with these names. These files contain only
 comments. Your job is to write the code that prints stuff to the
