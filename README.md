@@ -70,7 +70,8 @@ Homeworks (90 points possible)
 
 There are nine homework assignments. Each is 10 points, for a total of
 90 points. Homeworks are due at 6pm. After they are late, you may only
-receive a maximum of 5 points. You may use RetroGrade to turn in your
+receive a maximum of 5 points. You may use
+[RetroGrade](http://retrograde.cs.colorado.edu) to turn in your
 assignment as often as you like. Keep in mind that if you turn it in
 after it is due, it will cap your score at 5/10.
 
@@ -180,6 +181,17 @@ _Think Java (How To Think Like A Computer Scientist)_
 _The Command Line Crash Course_
 
 :: [http://cli.learncodethehardway.org/](http://cli.learncodethehardway.org/)
+
+Fun Stuff
+=======
+
+Sometimes I find interesting web sites or little toys that might be appealing to beginning CS students. Here are some refs to cool things.
+
+_Project Euler_
+
+:: [http://projecteuler.net/](http://projecteuler.net/) These are
+little puzzles that can be solved with math and little programming
+hacks. Challenge yourself! (Thanks to Will Holden for finding it.)
 
 General Topics
 ========
