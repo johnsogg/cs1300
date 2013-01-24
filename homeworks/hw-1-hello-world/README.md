@@ -121,7 +121,7 @@ program like this:
 	
 This may translate into Victorian English as the following:
 
-"Dear C++ compiler whose name is g++, please kindly compile the source
+"Dear C++ compiler whose name is `g++`, please kindly compile the source
 file named `hello.cpp` and output an executable whose name is
 `hello`."
 
@@ -129,6 +129,17 @@ The output file is directly executable by the operating system. This
 _differs_ from Java. Java uses a virtual machine to translate Java
 bytecode into machine instructions. With C++, the binary sitting in
 `hello` already contains machine code that can be executed right away.
+
+You may run your executable file by typing __exactly__ the following:
+
+	./hello
+
+The dot-slash characters are vitally important. The dot means 'the
+current directory', the slash is a path separator, and the rest is the
+name of the file you want to run. This is necessary because `hello` is
+not in your shell's search path. (And _search path_ is a topic beyond
+this assignment, but it would serve you well to learn about what $PATH
+is.)
 
 Submit your source file, `hello.cpp`. _Pro tip: You will never need to submit
 anything other that source files, in any language._
