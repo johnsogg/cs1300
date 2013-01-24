@@ -11,6 +11,9 @@ that the programming environment is set up correctly, and to convince
 ourselves that we can write a program. (Even if that program is very
 simple.)
 
+Python
+--------
+
 Here is the entire program:
 
 	# this is the Hello World program in Python
@@ -75,6 +78,64 @@ Go ahead and play around with the print command. You can have your
 computer print out pleasant greetings to you by name. Or you can make
 your computer print out an expletive-laden rant about your 1300
 teacher. 
+
+Java
+-------
+
+For Java, there are three requirements:
+
+1. You create a plain text file written in java. For the assignment,
+you save this as `hello.java`, and the file must contain the
+definition for a single public class called 'hello'. The main()
+function simply uses System.out.println("Hello World") to print text
+to the console.
+
+1. You give this java source file to the Java compiler. To run the
+compiler with your source file, you cd into the directory where your
+file is, and type `javac hello.java`.
+
+1. If successful, the compiler creates an output file called a 'class
+file', and it will be named `hello.class`. To run this, you give the
+Java interpreter the name of a class (note: this is the name of the
+class, not the name of the class _file_). Run this from the same
+directory as above by typing `java hello`. You will see "Hello World"
+appear on the screen.
+
+Turn in the homework by uploading hello.java.
+
+I am intentionally leaving these instructions vague because I expect
+you to learn how to learn how to program. Yes, I just said "learn how
+to learn how to". That is not a typo :)
+
+C++
+------
+
+The requirements for C++ are similar. Make a plain text file written
+in C++ and name it 'hello.cpp'. Like Java, you must first _compile_
+your C++ program using a compiler. Using the VM (or any Linux
+distribution, or on a Mac with the developer utils installed (please
+read about these in Learn C The Hard Way)) you compile your source
+program like this:
+
+	g++ -o hello hello.cpp
+	
+This may translate into Victorian English as the following:
+
+"Dear C++ compiler whose name is g++, please kindly compile the source
+file named `hello.cpp` and output an executable whose name is
+`hello`."
+
+The output file is directly executable by the operating system. This
+_differs_ from Java. Java uses a virtual machine to translate Java
+bytecode into machine instructions. With C++, the binary sitting in
+`hello` already contains machine code that can be executed right away.
+
+Submit your source file, `hello.cpp`. _Pro tip: You will never need to submit
+anything other that source files, in any language._
+
+Again, I am leaving it vague about how to do this, because a primary
+skill in computer programming is being able to quickly learn new tools
+and technologies---including programming languages.
 
 Turning In Your Homework
 =========

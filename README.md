@@ -11,7 +11,7 @@ actually a GitHub repository located here:
 People and Office Hours
 ------
 
-*Instructor:* Gabe Johnson - gabe.johnson@gmail.com - Office Hours 11--2:30 Tuesday/Thursday
+*Instructor:* Gabe Johnson - gabe.johnson@gmail.com
 
 *TAs:*
 
@@ -27,6 +27,9 @@ People and Office Hours
 * Noelle Renee Beaujon - Noelle.Beaujon@colorado.edu
 * Roberto Kingsley - roberto.kingsley@colorado.edu
 * Taylor Kohn - taylor.kohn@colorado.edu
+* Alec Thilenius - alec@thilenius.com
+
+[**Office Hours are kept up-to-date on the Google Calendar**](https://www.google.com/calendar/embed?src=mnf2litnbg9la6amc5e6qujft8%40group.calendar.google.com&ctz=America/Denver)
 
 Space/Time Coordinates for Main Lecture
 --------
