@@ -105,5 +105,16 @@ def get_primes_below(num):
     For example, if this is called with 24, the return list should be:
 
     [ 2, 3, 5, 7, 11, 13, 17, 19, 23 ]
+
+    Helpful hint: make a helper function called is_prime(num). That
+    function should return True if the input number is prime or
+    not. Then you can write a short (about five line) function here.
+
+    Another helpful hint: Google is your friend.
+
+    A parting helpful hint: TYPE EVERYTHING YOURSELF. Understand
+    it. Break it. Fix it. Ask creative questions and then modify your
+    code to answer them.
     """
     pass
+
