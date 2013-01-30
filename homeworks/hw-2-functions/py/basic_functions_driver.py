@@ -19,6 +19,7 @@
 
 import unittest
 from basic_functions import *
+from sys import argv
 
 class BasicTest(unittest.TestCase):
     
@@ -75,6 +76,19 @@ class BasicTest(unittest.TestCase):
         self.assertEquals(massive[:massive.index(101)], get_primes_below(100))
 
 if __name__ == '__main__':
-    print "Running Python test suite..."
-    unittest.main()
-    print "... done running Python test suite."
+    num_args = len(argv) - 1
+    if num_args == 0:
+        print "Running Python test suite..."
+        unittest.main()
+        print "... done running Python test suite."
+    else:
+        print "Running specific tests:"
+        for arg in argv[1:]:
+            print "\t" + arg
+        suite = unittest.TestSuite()
+        tests = []
+        for arg in argv[1:]:
+            suite.addTest(BasicTest(arg))
+        runner = unittest.TextTestRunner()
+        runner.run(suite)
+
