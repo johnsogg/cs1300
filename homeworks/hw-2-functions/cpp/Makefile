@@ -1,0 +1,41 @@
+# This top block is all you will probably need to change
+STUDENT_IMPL_FILE 	= basic_functions.cpp
+STUDENT_OBJ_FILE 	= basic_functions.o
+PRIMARY_HEADER_FILE 	= basic_functions.h
+UNIT_TEST_IMPL_FILE 	= basic_functions_test.cpp
+UNIT_TEST_OBJ_FILE 	= basic_functions_test.o
+UNIT_TEST_BINARY 	= basic_functions_test
+
+# Other object files needed in building targets for unit testing
+FRAMEWORK_TARGETS	= UTFramework.o
+
+USER_DIR = .
+CPPFLAGS += -I$(GTEST_DIR)/include
+CXXFLAGS += -g -Wall -Wextra -std=c++0x
+
+# House-keeping build targets.
+
+all : $(UNIT_TEST_BINARY)
+
+clean :
+	rm -f $(TESTS) *.o $(UNIT_TEST_BINARY)
+
+# Assignment-specific build rules below.
+
+UTFramework.o: $(USER_DIR)/UTFramework.cpp	\
+                 $(USER_DIR)/UTFramework.h
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/UTFramework.cpp
+
+$(STUDENT_OBJ_FILE): $(USER_DIR)/$(STUDENT_IMPL_FILE) \
+                $(USER_DIR)/$(PRIMARY_HEADER_FILE) \
+                $(FRAMEWORK_TARGETS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/$(STUDENT_IMPL_FILE) -o $(STUDENT_OBJ_FILE)
+
+$(UNIT_TEST_OBJ_FILE) : $(USER_DIR)/$(UNIT_TEST_IMPL_FILE) \
+                     $(USER_DIR)/$(PRIMARY_HEADER_FILE) \
+                     $(FRAMEWORK_TARGETS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/$(UNIT_TEST_IMPL_FILE)
+
+$(UNIT_TEST_BINARY) : $(STUDENT_OBJ_FILE) $(UNIT_TEST_OBJ_FILE) \
+		   $(FRAMEWORK_TARGETS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
