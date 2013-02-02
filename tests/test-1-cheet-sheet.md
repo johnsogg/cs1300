@@ -295,7 +295,7 @@ __the last colon__: take careful note of the colon character `:` at
 the end of that line. It is necessary. Without it you get a syntax
 error.
 
-__<suite>__: this is a block of code that will be executed for each
+__suite__: this is a block of code that will be executed for each
 element in `bunch_of_items`, and the variable `single_thing` is
 different each time. The suite should all have the same base
 indentation---this means it has to be indented one level from the 'f'
