@@ -1,8 +1,252 @@
 Cheat Sheet for Test 1
 =========
 
+This cheat sheet does two things:
+
+1. Explains the format of the test.
+
+2. It is a summary of everything we've done in CS 1300 up to the first
+test. You can use this to study, and possibly as a reference as you
+write more programs.
+
+Format Of Test 1
+=========
+
+Test 1 (and probably the others) will be open-note, but
+closed-laptop. You can print out whatever you want (including this
+document), write out your own notes, or whatever. But if it runs on
+electricity, leave it stashed in your bag. 
+
+There will be three sections: _software development concepts_,
+_debugging_, and _Python Language_.
+
+Software Development Concepts
+========
+
+For a computer to run a program, it needs a series of low-level
+machine instructions that are incredibly difficult for humans to write
+directly. So instead of writing machine instructions, we write
+computer programs in a high-level language like Python or C++ or Java,
+and use tools to convert our source code into machine instructions.
+
+We've only talked about Python so far, so I'll only summarize how it
+works in Python. There are similar processes for every other language
+I can think of. We write _source code files_ that conform to some
+language _syntax_. We then process these files using an _interpreter_
+or _compiler_, which converts our high-level code into machine
+code. Last we _execute_ those machine instructions.
+
+There's lots of other related concepts and technologies we often use
+in software development, including _text editors_, and the _command
+line interface_. I'll expand on all these italicized concepts in the
+following sections.
+
+Source Code Files
+----------
+
+A Python program file is often called a `script`, because it is used
+by an interpreter to (seemingly) run the program directly---as though
+it is reading from a script. Our script should be stored in a file
+with a `.py` file extension. This is called _source code_ because it
+is the source of all subsequent processing by the computer to actually
+do something.
+
+Syntax
+--------
+
+Inside our file that ends in `.py`, there should be nothing but
+propertly formed, syntactically correct sentences that conform to the
+Python language grammar.
+
+(There's a huge section on the particular grammar in the last main
+section of this document.)
+
+Here's a legitimate program that is in actual production use on
+RetroGrade. You don't need to understand everything in this code
+listing---I'm providing it as an example of what real code looks like.
+
+	# report_scores.py
+	# 
+	# Prints out the scores for a particular assignment. Just give it 
+	# the name of a homework on the command line.
+
+	import os, sys
+	from sys import argv
+
+	from homework.models import *
+
+	if __name__ == "__main__":
+		if len(argv) != 2:
+			print "Usage: report_scores <hw dir>"
+			print "\nThis is the same dir as in the grading-scripts"
+			exit()
+
+		hw_dir = argv[1]
+		hw = Homework.objects.get(instructor_dir=hw_dir)
+		num_students = []
+		for i in range(16):
+			scores = Score.objects.filter(homework=hw, normal_points = i)
+			num = 0
+			for score in scores:
+				num = num + 1
+			print "%d: %d" % (i, num)
+			num_students.append(num)
+		print "Total students participating: %d" % sum(num_students)
+		
+Notice that the code _looks_ well-formatted. In Python, whitespace
+(that means spaces, tabs, and new lines) have a specific
+meaning. Python groups lines of code together based on their
+indentation. Such a group of code is called a `suite` in Python. For
+example, the statement `for i in range(16):` is followed by a suite
+consisting of six lines of code because they are all at or beyond the
+same indentation level. The line that starts `print "Total
+students...` is _not_ part of the for-loop's suite because it is not
+indented as far as the statements directly above it.
+
+Syntax Errors
+------------
+
+A syntax error is one kind of problem in your code. It indicates that
+you didn't write a grammatically correct statement in Python. Unlike
+humans, who are tolerant of grammatical mistakes (or at least can
+usually figure out what you mean), computers totally freak out at the
+sight of them.
+
+Here's a block of code taken from above, but modified so that it
+contains a syntax error:
+
+	for score in scores
+		num = num + 1
+
+Can you spot the error?
+
+A for-loop is has the following grammar:
+
+	for <var_name> in <iterable_thing>:
+		<suite>
+
+The colon at the end of the first line is _required_, otherwise Python
+won't understand what you're trying to do. It will be confused and
+produce an error and _stop trying to process your program_. Can you
+spot the syntax error in our `scores` loop now?
+
+Interpreters and Compilers
+-----------
+
+We use another software tool to turn source code into something the
+machine can use. In Python, the tool we used to do this is
+imaginitively called the _Python Interpreter_, and it is run on the
+command line with the command `python`. Python is known as an
+_interpreted_ langauge, since the `python` tool reads input from your
+source code and directly turns it in to machine code, and then
+executes it.
+
+For example, if I have a simple program in a file `wonderful_hack.py`:
+
+	# wonderful_hack.py
+	for i in range(10):
+		print "A number: " + str(i)
+	print This line has a bug because there are no quotes around my string!
+
+The `python` program can also be made to compile your program without
+running it. This has the very helpful side-effect of checking the
+entire program to see if it is syntactically correct. To do this on a
+file called `wonderful_hack.py` you may run the command:
+
+	$ python -m py_compile wonderful_hack.py
+
+If it gives no output, that means your program is syntactically correct.
+
+If instead you see this:
+
+	$ python -m py_compile wonderful_hack.py 
+	SyntaxError: ('invalid syntax', ('wonderful_hack.py', 4, 15, 'print This line has a bug because there are no quotes around my string!\n'))
+	
+This means there is a syntax problem because there is something
+syntactically incorrect. It reports that the error is on line 4,
+column 15. _Remember that the true problem might actually be before
+the line reported._ This is because it got as far as line 4 before
+giving up. (In case of `wonderful_hack.py` the error really was on
+L4.)
+
+Executing Machine Code
+--------
+
+We've only talked about this in passing so far and won't be tested on
+it. 
+
+Text Editors
+--------
+
+To create source code, you need to create a _plain text_ file that
+contains syntactically correct sentences in whatever language you're
+using. Many people are using `Geany` on the VM; others use `gedit`. In
+class I often use `emacs`. I've seen some people using other editors
+like `Sublime Text 2` for the Mac (it looks really cool).
+
+The point is that you may create source code with any program that
+saves plain text files. You could technically use `NotePad` or `Text
+Edit`, but those programs don't offer any additional support such as
+syntax highlighting, or the ability to run your program from inside
+the editor.
+
+Command Line Interface
+---------
+
+We've been using a command line interface that looks like a circa
+1970s computer. This is not because we're retro; we use command line
+interfaces for two main reasons: a) it is a standard way of
+interacting with source files that experienced programmers find
+familiar, and b) it gives us an incredibly way of interacting with
+editors, source files, and other programming tools (like `git`). 
+
+Be aware that if you become comfortable with the command line you're
+well on your way to being a rock star programmer.
+
+Debugging
+========
+
+There are two main activities you do when coding: _debugging_, and
+_bugging_. This is a little joke that I like to tell to introduce
+debugging, but it really is close to true. _Bugging_ is the act of
+writing new code, and since we're human we nearly always create bugs
+and _put them in our code_.
+
+Later, we have to _debug_ our program. There are many strategies to
+doing this, and many related skills.
+
+The most important thing to remember when debugging is that the
+computer is doing __EXACTLY__ what it is programmed to do. If it isn't
+behaving as you expect, you either need to update your code, or update
+your expectations. You can't reason with a computer. (Not yet,
+anyway.)
+
+I have several pieces of advice:
+
+1. Write a few lines of code, then check for bugs. Compile it, run it,
+convince yourself that you didn't mess it up. Repeat.
+
+2. When there is a bug, add some print statements that tell you where
+in the source code the interpreter is, and what the values of relevant
+variables are.
+
+3. Get to know error messages, and remember what your solution was
+when you tracked down the problem. This will make it easier and faster
+to solve the next error message of the same kind. Earlier we saw the
+syntax error in the `wonderful_hack.py` program: we know from
+experience that syntax errors mean we are not using the right
+indentation, punctuation, or other Python-approved grammar.
+
+Bugs come in two main varieties: _syntax_ errors, and _semantic_
+errors. Syntax errors mean you don't have a grammatically correct
+program. Semantic errors mean your program doesn't do what the
+programmer meant it to do.
+
+Python Language So Far 
+=========
+
 Keywords
-=======
+--------
 
 The Python interpreter expects you to give it a bunch of `statements`
 that it can use to turn code into a running program. Many of the words
@@ -49,7 +293,7 @@ we've covered so far, or that I know people have used in the homework.
 	print: a special function that sends text to your screen
 	
 Comments
-=======
+--------
 
 A `comment` is text that the interpreter ignores. Comments begin with
 a pound sign (`#`) and continue until the end of the line. Example:
@@ -60,7 +304,7 @@ Comments can be helpful for documenting your code. They also are
 useful if you want to temporarily disable lines of code.
 
 Literals
-=======
+---------
 
 A _literal_ is a value that the interpreter can use directly.
 	
@@ -85,7 +329,7 @@ Notice that strings can be defined using either `'single quotes'` or
 `"double quotes"`.
 
 Variables
-========
+---------
 
 A _variable_ is something that we call by name, and it contains a
 value. For example, here are some variables.
@@ -106,7 +350,7 @@ Here we just abused the `dog_name` variable by initializing it to
 `"Sputnik"`.
 
 Arithmetic Operations
-=========
+---------
 
 The standard arithmetic operations for addition, subtraction,
 multiplication, and division look like this:
@@ -143,7 +387,7 @@ The division operator `/` gives us the 3, the modulo operator `%`
 gives the 2.
 
 Truth Tests
-=======
+--------
 
 A truth is one that gives a truth value. We can compare boolean
 variables (`True` or `False`) or we can compare numbers or other
@@ -177,7 +421,7 @@ Truth values are used most often as the gatekeepers in Loops and If
 Statements (see below)
 
 Lists
-======
+-------
 
 Lists are a nice built-in feature of Python. They give you an ordered
 sequence of items: numbers, strings, booleans, even other lists! The
@@ -205,7 +449,7 @@ mentioned them in class (briefly), but these will NOT be on the test:
 	my_list.pop()	# returns 20, list is now [3, 7, 11, 11, 19]
 
 If Statements
-=======
+---------
 
 An `if` statement lets you execute blocks of code conditionally. There
 are several variants of an `if` statement, summarized thusly:
@@ -262,7 +506,7 @@ case, the `else` clause runs, if it is present. If the `else` clause
 isn't present, that means none of the suites will run.
 
 Loops
-=======
+---------
 
 A loop is a way to iterate over several values such as a list. There
 are a few ways to loop in Python, but so far we've only seen the `for`
@@ -302,7 +546,7 @@ indentation---this means it has to be indented one level from the 'f'
 in the `for` keyword.
 
 Functions
-=========
+---------
 
 Functions are little pieces of code that act sort of like
 mini-programs. You can either define your own functions, or you can
@@ -368,9 +612,6 @@ You can see the various syntactic structures like `def` and the
 parameter list. And in this example the suite is more obvious because
 there are four lines that are indented the same amount.
 
-Misc Notes
-=========
-	
 Names - How to give things names
 ------------
 
