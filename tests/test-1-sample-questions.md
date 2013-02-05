@@ -78,13 +78,13 @@ Programming (Writing)
   <n>" where <n> is one of the odd numbers below 14. In other words,
   write a `for` loop that will cause this to be printed:
   
-    Hello 1
-	Hello 3
-	Hello 5
-	Hello 7
-	Hello 9
-	Hello 11
-	Hello 13
+		Hello 1
+		Hello 3
+		Hello 5
+		Hello 7
+		Hello 9
+		Hello 11
+		Hello 13
 	
 * If I want to represent the number of kids I have, what's the most
   appropriate data type? 
@@ -121,7 +121,7 @@ What's do the following things mean?
 
 If I set `dongle = ['a', 3, True, "Yam"]` and then ran that for-loop,
 what would print? What is the value of `dongle` during the last time
-it runs? How many times would it loop?
+it runs? How many times would the `for` loop iterate?
 
 What does the following code print out?
 
