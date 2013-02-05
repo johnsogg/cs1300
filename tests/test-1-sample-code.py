@@ -6,10 +6,11 @@ input_data = [6, 9, 3, 2, -4, 10, 14, 3, ]
 # input_data[0] is 6
 # input_data[1] is 9
 # input_data[2] is 3
+# and so on, up to input_data[7] = 3
 
 print input_data
 
-input_data.sort()
+input_data.sort() # you are not responsible for knowing about 'sort()'
 print input_data
 
 val = None
@@ -18,7 +19,11 @@ for x in input_data:
 print input_data[0]
 print val
 
+# the following gives us the value of the last data cell
 print input_data[len(input_data) - 1]
+
+# another way to do this is
+print input_data[-1]
 
 print "Now the list is:"
 print input_data
@@ -30,11 +35,13 @@ print input_data
 val = 0 # declare/initialize val out here so
         # it is visible outside the for-loop
 n = 0   # same thing.
-for x in input_data:cd ../lkjaslkfjqdlkgfjewdklv;nlkasjdflkjasdflkahjsdfkjhp[]cvxfguiolfgdxzvfuy80[uyfxgdy9upyfgxip'
+for x in input_data:
     val = val + x
     n = n + 1
     print n
+    # we could also increment 'val' like the following:
     # val += x
+
 # another way of doing this:
 # val = sum(list)
 
