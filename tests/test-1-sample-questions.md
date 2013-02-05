@@ -9,9 +9,9 @@ form of a program?
 * What is the meaning of the following three lines that are typed
 into a command line interface?
 
-	ls
-	pwd
-	cd ../my_favorite_place/
+    ls
+    pwd
+    cd ../my_favorite_place/
 	
 * What's the common name of the program that interprets and runs
 Python programs?
