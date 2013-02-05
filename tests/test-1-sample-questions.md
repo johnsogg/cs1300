@@ -113,7 +113,7 @@ Given the following code:
 	for dingle in dongle:
 		print dingle
 
-What's do the following things mean?
+What do the following things mean?
 
 * `for`
 * `dingle`
