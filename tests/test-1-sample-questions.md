@@ -26,6 +26,13 @@ Python programs?
   the program? (There is more than one right answer, you only need to
   give one.)
 
+__Answers to the above__
+
+* _source file_ or _source code_
+* _interpreter_
+* the file is not found in your current directory. you need to `cd`
+  into the right directory, like this: `cd /home/usr/code`.
+
 Debugging
 --------
 
@@ -55,6 +62,16 @@ For all of the following blocks of code: (a) Spot the bug, (b) propose
 	for num in numbers:
 		if num % 2 == 1:
 			result = num
+
+__Answers to the above__
+
+* there's no colon to separater the `for val in my_list` from the
+  suite below.
+* the input to `raw_input` is meant to be a string, but since there
+  are too many quote characters `'` it doesn't know where the string
+  really starts and stops. You could fix it by using double-quotes `"`
+  on the outside, or escaping the midding quote with a slash, like
+  this: `\'`.
 
 Programming (Writing)
 --------
@@ -98,7 +115,7 @@ Programming (Writing)
 * If I want to accurately represent my oldest kid's height in meters,
   what's the most appropriate data type?
   
-The answers to the kid questions are:
+__The answers to the kid questions are:__
 
 * integer
 * list (of integers)
@@ -123,7 +140,9 @@ If I set `dongle = ['a', 3, True, "Yam"]` and then ran that for-loop,
 what would print? What is the value of `dongle` during the last time
 it runs? How many times would the `for` loop iterate?
 
-What does the following code print out?
+What does the following code print out? _(You can answer this yourself
+by typing in the code and making sure it is properly indented, then
+running it.)_
 
     #---------------------------------------------------
     x = 4
