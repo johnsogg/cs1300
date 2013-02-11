@@ -9,6 +9,9 @@ dog = { 'name' : 'Sputnik', # dog's name
 # now you can use the values contained in this dictionary by
 # using the 'dog' variable, the square brackets, and the key
 # that you're interested in using. Like this:
+
+print "My dog is named " + dog["name"] + " and he is " + str(dog['age']) + " years old."
+
 print "My dog's name is", dog['name']
 print dog['pos_pron'], "occupation is", dog['occupation']
 print dog['pronoun'], "is", dog['age'], "years old."
