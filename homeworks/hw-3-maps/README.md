@@ -68,7 +68,7 @@ That is a very common use case with dictionaries, so the people who
 made Python give you a shortcut. You can write it like the following,
 with the same effect:
 
-	for k in puppy.keys():
+	for k in puppy:
 		print k
 
 Inside the for-loop you can also get the value contained in the
