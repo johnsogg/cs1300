@@ -14,12 +14,14 @@
 # You can check out the code and readme in the directory above this
 # one.
 
-# create an empty dictionary and return it
+# create an empty dictionary and return it.
 #   1 point
 def make_empty_dictionary():
     pass
 
-# create a dictionary that contains the following key/value pairs:
+# create and return a dictionary that contains the following key/value
+# pairs:
+#
 # 'name' should be 'Unknown Name'
 # 'age' should be 'Unknown Age'
 # 'major' should be 'Unknown Major'
@@ -27,16 +29,17 @@ def make_empty_dictionary():
 def make_student_dictionary():
     pass
 
-# create a dictionary that contains the same keys as listed in the
-# make_student_directory function, but has the values indictated in
-# this function's parameter list. 'name' and 'major' will be strings,
-# and 'age' will be an integer.
+# create and return a dictionary that contains the same keys as listed
+# in the make_student_directory function, but has the values
+# indictated in this function's parameter list. 'name' and 'major'
+# will be strings, and 'age' will be an integer.
 #   1 point
 def make_real_student_dictionary(name, age, major):
     pass
 
-# make a list based on a student dictionary. The list should have the
-# following elements:
+# make and return a list based on a student dictionary. The list
+# should have the following elements:
+#
 # index 0: the student's name
 # index 1: the student's major
 # index 2: the student's age
