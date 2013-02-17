@@ -50,7 +50,46 @@ stops, and continues. Once it continues, you see 'Done with loop.'
 Boolean Logic
 --------
 
-`and` and `or` are your friends.
+Boolean logic lets us do math with truth statements (`True` and
+`False` in Python, `true` and `false` in C++ and Java). For example if
+somebody says "It is daytime and it is night time" they just provided
+you with two assertions, (the part about day, and the part about
+night), and you can combine them in a way to determine if the overall
+statement is true. We know from experience that it can't be both day
+and night time, so we know the entire statement is false.
+
+But if that person said "It is daytime _or_ it is nighttime", there is
+a pretty good chance it is true, depending on how we split the day up. 
+
+In programming languages and many related areas, we can use a small
+number of operators to combine truth values. The two most common
+boolean operations are `and` and `or`. They work sort of like addition
+or multiplication. They work with two inputs. Math people call them
+`p` and `q`, but I'll call them `first_thing` and `second_thing`. Here
+is everything you need to know about these operations:
+
+	first_thing   second_thing    and    or
+	true          true            true   true
+	true          false           false  true
+	false         true            false  true
+	false         false           false  false
+
+In other words:
+
+* An `and` statement is only true when both inputs are true.
+* An `or` statement is only false when both inputs are false.
+
+Using this in Python is easy:
+
+	if first_thing and second_thing:
+		<code runs when first AND second things are true>
+	else:
+		<code runs with the other block doesn't>
+		
+	if first_thing or second_thing:
+		<code runs when first OR second thing is true>
+	else:
+		<code runs if the above block doesn't>
 
 Simple Classes
 ---------
