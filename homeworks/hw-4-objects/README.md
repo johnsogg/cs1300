@@ -94,6 +94,78 @@ Using this in Python is easy:
 Simple Classes
 ---------
 
-We'll do some simple class definitions and make simple objects. No
-methods yet, just differenet objects sort of like the dictionary
-homework.
+We refer to real world items by category. In class I gave an example
+using a Phone. I have a phone, you have a phone, but they are
+different objects. Yet, they are both examples of phones. We can make
+sub-categories, too: some phones are made by Samsung, others by
+Apple.
+
+This observation of the real world is what led software researchers to
+develop the idea of "classes": We could have a class of things called
+`Phone`, and then we can make lots of different _instances_ of that
+class. The instances are all independent objects that were all defined
+based on the `Phone` class.
+
+This week, we're going to take some baby steps with classes in Python.
+
+To relate this to last week's homework on dictionaries, here's how we
+might define a `class` for a CU student, rather than using
+dictionaries.
+
+First, define the Student class using  the following syntax.
+
+	class Student:
+		name = "Unknown Name"
+		age = 0
+		major = "Unknown Major"
+
+Now that we've defined the Student class, we can create instances:
+
+	s1 = Student()
+	s2 = Student()
+
+We access each student's name, age, major, and other 'members' using dot syntax:
+
+	print s1.name
+	print s2.major
+
+Right now the instances have the same data. We can customize them by
+assigning into the member variables:
+
+	s1.name = "Betty Boop"
+	s1.age = 19
+	s1.major = "Flapping"
+
+Give Popeye something to do too.
+
+	s2.name = "Popeye"
+	s2.age = 26
+	s2.major = "Sailor"
+
+Now we can print things to convince each other that the objects really
+are independent.
+
+	print "Meet " + s1.name + ", a " + str(s1.age) + " year old majoring in " + s1.major
+	print "Also say hello to " + s2.name + " who is a " + s2.major
+
+We can define functions that use objects, like this:
+
+	def greet_student(student):
+		print "Hello, " + student.name
+
+And we can call functions that use objects as input:
+
+	greet_student(s1) # prints Hello, Betty Boop
+	greet_student(s2) # prints Hello, Popeye
+
+So last week we used this kind of uncomfortable syntax to access data
+in a dictionary. Now we can use a cleaner syntax with objects.
+ 
+	mickey = { 'name' : 'Mickey Mouse',
+			   'age' : 84,
+			   'major' : 'Animation' }
+
+Compare the syntax for these:
+
+	print "Syntax for dictionary: " + mickey['name']
+	print "Syntax for objects: " + s1.name
