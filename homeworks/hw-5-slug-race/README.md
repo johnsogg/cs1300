@@ -29,18 +29,18 @@ variables that you should use to determine what action you can take.
 Based on these two variables, your `next_round` method will return one
 of the following variables:
 
-* `Decisions.MOVE` has your slug trudge on forward. Doing so makes you
-  hungry and takes energy. Note that your slug moves faster when it
-  has more energy, but it also loses energy slightly faster when it
-  has more energy. 
+* `Decisions.MOVE` has your slug trudge on forward. Doing so makes
+  sluggy hungry and takes energy. Note that your slug moves faster
+  when it has more energy, but it also loses energy slightly faster
+  when it has more energy.
 
 * `Decisions.EAT` causes your slug to pull over at a roadside cafe for
   a spot of lunch. Your slug won't move when it is eating but it will
-  regain a small amount of energy.
+  regain a small amount of energy and reduces hunger.
 
-* `Decisions.REST` is the sign that it is time to take a nap. The slug
-  is out of commission for a few turns, but when it wakes up it has
-  full energy and is all zippy fast.
+* `Decisions.REST` is your signal that it is time for your slug to
+  take a nap. The slug is out of commission for a few turns, but when
+  it wakes up it has full energy and is all zippy fast.
  
 The exact mathematical descriptions of these things are encoded in
 `race.py`, and I encourage you to take a look there.
