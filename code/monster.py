@@ -15,7 +15,7 @@ hitpoints, they all have names, and they can all engage in combat.
 
 '''
 
-class Monster(object):
+class Monster():
     hitpoints = 10
     name = "Terrifying monster"
     attack_power = 4
@@ -51,28 +51,30 @@ class Player(Monster):
     attack_power = 13
     name = "The hero"
 
-# make a list of monsters for the player to fight in mortal combat.
-monsters = [Monster(), FluffyBunny(), Slime(), Dragon()]
+# make a list of monsters for the player 
+# to fight in mortal combat.
+monsters = [Monster(), FluffyBunny(), 
+            Slime(), Dragon()]
 
 # make a special reference to our player
 player = Player()
 
-# now play the game until the player is eaten by a grue.
+# now play until the player is eaten by a grue.
 while True:
 
-    # loop through all the monsters and let them attack the player
+    # loop through monsters, let them attack player
     for m in monsters:
         m.attack(player)
         print player.name, "has", player.hitpoints, "hitpoints"
-        # check after each attack to see if the player is still
+        # check after each attack if the player is still
         # alive and kicking. if not, quit the game.
         if player.hitpoints <= 0:
             exit(0)
 
-    # give our hero a chance at redemption. attack all the monsters.
+    # give our hero a chance to attack all monsters
     for m in monsters:
         player.attack(m)
-        # similarly to the above, check if the monster is dead.
+        # check if the monster is dead.
         # if it is remove it from the list.
         if m.hitpoints <= 0:
             monsters.remove(m)
