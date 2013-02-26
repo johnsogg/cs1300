@@ -12,7 +12,21 @@ class Student:
 fn = [ "Bob", "Gabe", "Jillian", "Monkeybutter" ]
 ln = [ "Jones", "Johnson", "Brown", "Zirconium","Foo" ]
 
-for i in range(349):
+students = []
+for i in range(5):
     first = fn[i % len(fn)]
     last = ln[i % len(ln)]
     s = Student(first + " " + last, 20, "BA in CS")
+    students.append(s)
+
+print "Made", len(students), "students"
+print students
+
+for stud in students:
+    if stud.name == "Gabe Johnson":
+        stud.major = "Underwater Basketweaving"
+        break
+
+for stud in students:
+    print stud.name, "is a", stud.major, "major"
+
