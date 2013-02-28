@@ -339,4 +339,3 @@ campus resources available to assist individuals regarding
 discrimination or harassment can be obtained at
 http://www.colorado.edu/odh
 
-hey word up

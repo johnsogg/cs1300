@@ -27,9 +27,9 @@ Programming (Writing)
   
 * Write a function that takes a dictionary as input and prints out
   key/value pairs in the following format:
-  
-	  key 'foo' has value: 49
-	  key 400 has value: "Tarzan"
+
+	    key 'foo' has value: 49	  
+		key 400 has value: "Tarzan"
 
 * Follow-on question: do we need to know the keys for the dictionary
   in advance? Why or why not?
