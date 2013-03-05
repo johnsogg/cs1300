@@ -1,3 +1,5 @@
+// This is the file that runs the bouncy ball app.
+
 import java.util.ArrayList;
 
 import processing.core.*;
