@@ -1,4 +1,5 @@
 // This is the file that runs the bouncy ball app.
+// Just run this with 'java -classpath core.jar:. Main'
 
 import java.util.ArrayList;
 
