@@ -74,6 +74,7 @@ class Race:
             print "Iteration:", self.iteration
             print "# Slugs left:", len(self.slugs)
             print "Winner:", winner
+        return winner
 
 if __name__ == '__main__':
     slug = Slug("Barney")
