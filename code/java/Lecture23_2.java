@@ -19,18 +19,25 @@ public class Lecture23_2 extends PApplet {
      * Hertz. That means it is called every 16 milliseconds.
      */
     public void draw() {
-	background(255, 0, 0); // set background to black
-	fill(0, 0, 255);
+	background(70, 70, 70); // set background to something
+	fill(0, 64, 0);
+	//    x     y   w     h
 	rect(400, 300, 200, 100);
-	fill(0, 255, 255);
-	ellipse(400, 300, 50, 100);
+
+	fill(212, 111, 249);
+	
+	strokeWeight(4.0f);
+
+	//       x    y   r1   r2
+	ellipse(400, 300, 100, 100);
+
 	// some draw methods associated with PApplet:
 	// background(int)
 	// stroke(int, int, int)
 	// fill(int)
 	// ellipse(x, y, radius_1, radius_2)
 	// noFill()
-	// strokeWeight(float)
+
 	// text(str, x, y)
     }
 
