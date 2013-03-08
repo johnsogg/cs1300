@@ -51,7 +51,7 @@ public class Race {
         return sl;
     }
 
-    public void do_race() {
+    public Slug do_race() {
 	Slug winner = null;
 	List<Slug> removeUs = new ArrayList<Slug>();
 	while (iteration < 200 && winner == null && slugs.size() > 0) {
@@ -112,6 +112,7 @@ public class Race {
 	    System.out.println("# Slugs left: " + slugs.size());
 	    System.out.println("Winner: " + winner);
 	}
+	return winner;
     }
 
     public static void main(String[] args) {
