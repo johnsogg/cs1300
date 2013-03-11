@@ -62,8 +62,9 @@ something like this, using pseudocode:
 I don't actually know what kind of visual output this ruleset might
 produce (I just made it up). You can play around with different
 rulesets to get different results. Some of them are pretty
-amazing. Read the [http://en.wikipedia.org/wiki/Rule_90](Wikipedia
-Page on _Rule 90_) for a pattern that generates pretty sweet geometry.
+amazing. Read the
+[Wikipedia Page on _Rule 90_](http://en.wikipedia.org/wiki/Rule_90)
+for a pattern that generates pretty sweet geometry.
 
 Here's the Java syntax for checking the first couple rules. You can
 see the pattern and go from there.
