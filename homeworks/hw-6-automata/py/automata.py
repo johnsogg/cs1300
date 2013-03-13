@@ -20,6 +20,11 @@ class Automata:
 	# values. then assign it to the object's "rules" member
 	# variable.
 	self.rules = { } # string to char
+
+        # The 'prev' member in the Python version is a string. This is
+        # different from the Java version. In Python you can address
+        # individual characters just like you do with lists. If foo =
+        # 'hello', then foo[2] is 'l', and len(foo) is 5.
         self.prev = None
         
     def addRule(self, pattern, output):
@@ -47,16 +52,9 @@ class Automata:
     def setInitialPattern(self, input_pattern):
 	# IMPLEMENT THIS METHOD.
 
-	# Instructions: You are given a String, but you need to
-	# initialize 'prev', which is a char[] (that's pronounced
-	# 'char array'). There are several ways to do this. One way
-	# to do this is to initialize 'prev' to be the same size as
-	# the input string, and then iterate through the characters
-	# contained in 'input' and set each character directly.
-	
-	# Example. If the input String is "hello", the initial
-	# pattern should be the char string equivalent to { 'h', 'e',
-	# 'l', 'l', 'o' }.
+	# Instructions: You are given a String, and you need to
+	# initialize 'prev', which is a string. In Python this is easy
+	# (one line!)
         pass
 
 
@@ -74,11 +72,15 @@ class Automata:
 
 	# This method advances the automaton's life cycle by one
 	# stage. The previous state of the automaton is described by
-	# the 'prev' character array. The goal here is to create a
-	# different character array that represents the next cycle of
-	# the automaton's evolution. Iterate through each character
-	# in 'prev' and calculate the next state, and store it in
-	# some character array that you initialize here.
+	# the 'prev' string. The goal here is to create a different
+	# string that represents the next cycle of the automaton's
+	# evolution. Iterate through each character in 'prev' using:
+        #
+        # for i in range(len(prev)):
+        #      <code>
+        #
+	# and calculate the next state, and store it in some character
+	# array that you initialize here.
 	#
 	# To do this correctly, you should implement and use the
 	# 'getPattern(int)' and use the 'applyRule' method that is
@@ -89,19 +91,17 @@ class Automata:
     def getPattern(self, idx):
 	# IMPLEMENT THIS METHOD.
 
-	# Using the index provided, look in the 'prev' character
-	# array and create a new String based on what you find there
-	# in the 3-member neighborhood of idx. Then return that
-	# String.
+	# Using the index provided, look in the 'prev' string and
+	# create a new String based on what you find there in the
+	# 3-member neighborhood of idx. Then return that String.
 	#
-	# If idx is 0, the return String should use prev[prev.length
-	# - 1], prev[0], and prev[1] combined.
+	# If idx is 0, the return string should use prev[prev.length -
+	# 1], prev[0], and prev[1] combined.
 	#
 	# if idx is prev.length-1 (the last indexable cell): prev[idx
 	# - 1], prev[idx], prev[0]
 	#
-	# otherwise the return value should use idx-1, idx, and
-	# idx+1.
+	# otherwise the return value should use idx-1, idx, and idx+1.
         pass
 
 if __name__ == "__main__":
