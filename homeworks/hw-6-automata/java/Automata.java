@@ -157,8 +157,8 @@ public class Automata {
 	// If idx is 0, the return String should use prev[prev.length
 	// - 1], prev[0], and prev[1] combined.
 	//
-	// if idx is prev.length (the last indexable cell): prev[idx -
-	// 1], prev[idx], prev[0]
+	// if idx is prev.length-1 (the last indexable cell): prev[idx
+	// - 1], prev[idx], prev[0]
 	//
 	// otherwise the return value should use idx-1, idx, and
 	// idx+1.
