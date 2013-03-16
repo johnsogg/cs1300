@@ -59,14 +59,33 @@ public class Lecture_26 extends PApplet {
 	
 	strokeWeight(4.0f);
 
+	// for x in my_list:
+	//    do_stuff(x)
+
+	for (Ball b : ballList) {
+	    for (Ball a : ballList) { // starbucks!
+		if (b != a) {
+		    float dist = b.dist(a);
+		    if (dist < 300) {
+			a.turnAround();
+		    }
+		}
+	    }
+	}
+
+	for (Ball b : ballList) {
+	    b.move();
+	}
+
 	for (Ball b : ballList) {
 	    b.draw();
 	}
+
 	// some draw methods associated with PApplet:
 	// background(int)
 	// stroke(int, int, int)
 	// fill(int)
-	// ellipse(x, y, radius_1, radius_2)
+	// ellipse(x, y, diam_1, diam_2)
 	// noFill()
 
 	// text(str, x, y)
@@ -75,16 +94,63 @@ public class Lecture_26 extends PApplet {
 }
 
 class Ball {
-    int ballX, ballY;
+    float ballX, ballY;
     Lecture_26 main;
+    float dx, dy;
 
     Ball(Lecture_26 main, int x, int y) {
-	ballX = x;
-	ballY = y;
+	ballX = (float) x;
+	ballY = (float) y;
+	dy = 3f; // moves 3px per draw
+	dx = 0.5f; // moves 0.5px per draw
 	this.main = main;
     }
 
-    void draw() {
-	main.ellipse(this.ballX, ballY, 40, 40);
+    //    a.turnAround();
+    void turnAround() {
+	System.out.println("Turning around! ew get away from me.");
+	dx = -dx;
+	dy = -dy;
     }
+
+    // float dist = b.dist(a);
+    float dist(Ball other) {
+	// the current ball is 'this'
+	// the other is sneakily named 'other'
+	float delta_x = other.ballX - this.ballX;
+	float delta_y = other.ballY - this.ballY;
+	// pythagoras sez: x*x + y*y = dist*dist
+	float xx = delta_x * delta_x;
+	float yy = delta_y * delta_y;
+	float sumsum = xx + yy; // dist squared
+	float sum = (float) Math.sqrt(sumsum); // take square root of dist squared
+	//	System.out.println("Distance: " + sum);
+	return sum;
+    }
+
+    void move() {
+	ballY = ballY + dy;
+	ballX = ballX + dx;
+	if (ballY > main.height && dy > 0) {
+	    dy = -dy; // dy = -1f * dy
+	}
+	if (ballY < 0 && dy < 0) {
+	    dy = -dy; // dy = -1f * dy
+	}
+	if (ballX > main.width && dx > 0) {
+	    dx = -dx;
+	}
+	if (ballX < 0 && dx < 0) {
+	    dx = -dx;
+	}
+    }
+
+    void draw() {
+	// ellipse: the last two params are the diam in x and y
+	// dimensions
+	main.ellipse(this.ballX, ballY, 40, 40);
+	main.noFill();
+	main.ellipse(this.ballX, ballY, 300, 300);
+    }
+
 }
