@@ -156,20 +156,7 @@
 using namespace std;
 
 int main() {
-  //  cout << "Hello, World!" << endl;
-  //  recite_lyrics();
-  //  data_types();
-  //  if_statements();
-  //  while_loops();
-  //  scope();
-  //  for_loops();
-  //  nested_for_loops();
-  //  arithmetic();
-  //  call_functions();
-  //  pointer_intro();
-  //  ptr_params();
-  //  strings();
-  structures();
+  cout << "Hello, World!" << endl;
 }
 
 /*
