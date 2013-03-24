@@ -1,0 +1,9 @@
+Symptom:
+  my_file.cpp:5: error: ‘cout’ was not declared in this scope
+
+Explanation:
+  the 'cout' output stream is defined in the standard namespace. If you want to use it, you have to either be "using namespace std;" or you have to explicitly specify cout with the std:: prefix, like "std::cout"
+
+Cure(s):
+  Be sure to #include<iostream> and issue the statement "using namespace std;"
+
