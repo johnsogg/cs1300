@@ -455,6 +455,7 @@ void while_scope() {
   int a = 6; // declared outside while loop
   while (a > 0) {
     int b = a + 10; // b is declared INSIDE the while loop
+    a = a - 1; // same as a--, but I don't like that cryptic syntax
     cout << "a: " << a << ", b: " << b << endl;
   }
   // for a compiler error, uncomment the next line. It will say
