@@ -46,6 +46,34 @@ void data_types() {
     cout << "in bar!" << endl;
   }
 
+/**
+ * CS 1300 students often want to convert their test scores into
+ * percentages. Write a function that returns a floating point
+ * percentage given a score and maximum number of points.
+ *
+ * Example:
+ * cout << get_percent(15, 30) << endl;
+ * cout << get_percent(23, 30) << endl;
+ *
+ * This will output 50.0 for the first line and something close to
+ * 76.6667 for the second.
+ *
+ * Notice that percentages range from 0 to 100, not 0 to 1. (hint,
+ * hint)
+ *
+ * If the passed in score is not between 0 and maxpoints (inclusive)
+ * return zero. If maxpoints is not positive, return zero.
+ *
+ * 2 points
+ **/
+float get_percent(int score, int maxpoints) {
+  float result = (float) score / (float) maxpoints;
+  result = 100 * result;
+  return result;
+}
+
 int main() {
-  foo();
+  float p = get_percent(22, 43);
+  cout << "Student got a " << 22 << " out of " << 43 
+       << " got percentage: " << p << endl;
 }
