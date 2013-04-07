@@ -89,3 +89,9 @@ struct student {
  */
 
 void structures();
+
+int get_sum(int numbers[], int n);
+
+void assign_into_slot();
+
+int* make_five_arr();

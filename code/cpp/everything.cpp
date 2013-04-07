@@ -917,3 +917,77 @@ void structures() {
   cout << "Bare Major: " << bare.major << endl;
 
 }
+
+/* ----------------------------------------------------------------------
+  18. Arrays
+
+  Arrays in C++ are similar in spirit to Python's lists and Java's
+  arrays. You might be interested in reading about arrays in the C++
+  Tutorial at http://cplusplus.com/doc/tutorial/arrays/.
+ 
+  An array is a sequential chunk of memory that holds the same kind of
+  thing. We can have an array of `int`s, or an array of `float`s, or
+  an array of any other data type.
+
+  To declare an array, we need to tell the compiler how many items
+  will be in the array. Say we want to make an array with 10
+  integers. We can declare it like this:
+
+	int favorite_numbers[10];
+	
+  Now we can access elements of the array using the numbers `0`
+  through `9` inclusive. If we access outside of that range, _we will
+  not necessarily get an error_, however, the data we access is likely
+  garbage.
+
+  This is a huge source of bugs in C and C++ programs. The way to
+  avoid this is to always do bounds-checking. Before you access an
+  array element, be absolutely sure that your index is in the proper
+  range.
+	 
+  We can pass arrays to functions that are declared like this:
+*/
+int get_sum(int numbers[], int n) {
+  int sum = 0;
+  for (int i = 0; i < n; i++) {
+    sum = sum + numbers[i];
+  }
+  return sum;
+}
+
+/*
+  Be aware C++ arrays are not particularly smart like Java arrays,
+  which knew their length. A C++ array is simply a block of memory,
+  and we can use an index to get at particular elements of that
+  memory. The C++ array has no record of how big it is, so we need to
+  pass around another variable that tells us the size.
+
+  That's why the `get_sum` function above takes in an array _and_ an
+  integer that says how big the array is. This is a ubiquitous C and
+  C++ pattern.
+
+  We can refer to an array's starting location with a pointer as
+  well. If we have an array that was declared earlier we can assign it
+  into a pointer, and use that pointer like an array:
+*/
+void assign_into_slot() {
+  int numbers[] = { 4, 10, 18 };
+  int* x = numbers;
+  int eighteen = x[2];
+  cout << "numbers[2] is the same as x[2]: " << numbers[2] << " == " 
+       << x[2] << " == " << eighteen << endl;
+}
+
+/*
+  If we want to return an array from a function, **we can't do this**:
+
+  int[] make_array(int size); // error: expected unqualified-id
+
+  Instead, we have to return the pointer to the first cell. Here's a
+  function that does that:
+*/
+
+int* make_five_arr() {
+  int* a = new int[5]; // a points to first cell
+  return a;
+}
