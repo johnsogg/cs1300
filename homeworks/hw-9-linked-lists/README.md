@@ -59,15 +59,5 @@ function, and run that code like this:
 
 	./linked_list_driver --manual
 
-The point value for correctly implementing each is given below:
 
-1. init_node = 1 point
-1. report = 2 points
-1. append_data = 1 point
-1. append = 2 points
-1. insert_data = 1 point
-1. insert = 3 points
-1. remove = 3 points
-1. size = 1 point
-1. contains = 1 point
 
