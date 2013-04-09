@@ -2,3 +2,7 @@
 #code-sample.py#
 
 *.py#
+code/cpp/everything
+code/cpp/hello
+code/cpp/lec31
+code/cpp/stack_vs_heap_array_pointers
