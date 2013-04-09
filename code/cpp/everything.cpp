@@ -991,3 +991,4 @@ int* make_five_arr() {
   int* a = new int[5]; // a points to first cell
   return a;
 }
+

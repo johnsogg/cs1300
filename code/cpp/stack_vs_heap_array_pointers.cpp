@@ -42,7 +42,7 @@ int* make_stack_array(int num) {
   }
   cout << "Before returning make_stack_array:" << endl;
   print_array(ret, 10);
-  return ret; // ret will be recycled upon return
+  return ret; // ret's memory will be recycled upon return
 }
 
 int* make_dynamic_array(int num) {
@@ -50,7 +50,7 @@ int* make_dynamic_array(int num) {
   for (int i=0; i < num; i++) {
     ret[i] = i;
   }
-  return ret; // ret will be left alone on return
+  return ret; // ret's memory will be left alone on return
 }
 
 int main() {
