@@ -99,10 +99,4 @@ void remove(node** head_ptr, int offset);
  **/
 int size(node* head);
 
-/**
- * Return true if the linked list pointed to by head contains a node
- * with the specified value.
- **/
-bool contains(node* head, int data);
-
 #endif /* defined __linked_list__ */

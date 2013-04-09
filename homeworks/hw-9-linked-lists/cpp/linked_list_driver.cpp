@@ -82,12 +82,16 @@ TEST_BEGIN("AppendData")
   node** head_ptr = &empty;
   append_data(head_ptr, 611);
   IsTrue("Null", empty != NULL, "List should now have non-null head node.");
-  IsTrue("Data", empty->data == 611, "List should have data == 611.");
+  if (empty != NULL) {
+    IsTrue("Data", empty->data == 611, "List should have data == 611.");
+  }
   append_data(head_ptr, -42);
   IsTrue("Null", empty != NULL, "First thing null");
   if (empty != NULL) {
     IsTrue("Null", empty->next != NULL, "Second thing null");
-    IsTrue("Data", empty->next->data == -42, "List should have data == -42.");
+    if (empty->next != NULL) {
+      IsTrue("Data", empty->next->data == -42, "List should have data == -42.");
+    }
   }
   node* legit = build_three_node_list(10, 15, 20);
   append_data(&legit, 33);
@@ -110,13 +114,17 @@ TEST_BEGIN("Append")
   node* append_me = mknode(611);
   append(head_ptr, append_me);
   IsTrue("Null", empty != NULL, "List should now have non-null head node.");
-  IsTrue("Data", empty->data == 611, "List should have data == 611.");
+  if (empty != NULL) {
+    IsTrue("Data", empty->data == 611, "List should have data == 611.");
+  }
   append_me = mknode(-42);
   append(head_ptr, append_me);
   IsTrue("Null", empty != NULL, "First thing null");
   if (empty != NULL) {
     IsTrue("Null", empty->next != NULL, "Second thing null");
-    IsTrue("Data", empty->next->data == -42, "List should have data == -42.");
+    if (empty->next != NULL) {
+      IsTrue("Data", empty->next->data == -42, "List should have data == -42.");
+    }
   }
   node* legit = build_three_node_list(10, 15, 20);
   append_me = mknode(33);
