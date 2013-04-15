@@ -14,8 +14,14 @@
 using namespace std;
 
 node* init_node(int data) {
-  // implement me
-  return NULL;
+  //  Triangle tr = new Triangle(); // java syntax
+  //  Triangle foo = null; // java
+  //  foo.something(); // java gives NullPointerException
+  //  tr.data = data; // java syntax
+  node* monkey = new node;
+  monkey->data = data;
+  monkey->next = NULL; // necessary?
+  return monkey;
 }
 
 /*
@@ -34,11 +40,23 @@ void report(node* head) {
 }
 
 void append_data(node** head_ptr, int data) {
-  // implement me
+  node* nn = init_node(data);
+  append(head_ptr, nn); // will call append(node**, node*)
 }
 
 void append(node** head_ptr, node* new_node) {
-  // implement me
+  node* head = *head_ptr;
+  if (head == NULL) {
+    // head = new_node; // didn't work. Why?
+    *head_ptr = new_node; 
+  } else {
+    node* cursor = head;
+    while (cursor->next != NULL) {
+      cursor = cursor->next;
+    }
+    // now cursor is a pointer to the last node.
+    cursor->next = new_node;
+  }
 }
 
 void insert_data(node** head_ptr, int offset, int data) {
