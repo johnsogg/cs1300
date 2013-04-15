@@ -121,15 +121,47 @@ Project (90 points possible)
 -------
 
 Programming is a practical art. The project gives you a chance to do
-something fun, interesting, epic, or all of the above. Watch this
-space for more information, because we haven't figured out the
-parameters for this yet. In the meantime, be thinking about cool
-things you can do with code, and you might be able to do it for your
-project.
-
-We realize that having 1/3 of your grade come at the very end is
+something fun, interesting, epic, or all of the above. We realize that
+having 1/3 of your grade come at the very end is
 nerve-wracking. Therefore, grading for the project will be fairly
-lenient. Watch this space.
+lenient.
+
+The only requirements for choosing a project are that it (1) must
+involve programming computers, and (2) must be awesome. That second
+part is really a matter of perspective, so make sure it is awesome _to
+you_.
+
+Students who focus on C++ at the end of the course (by getting at
+least 5 points on all C++ assignments) are exempt from doing the
+project. They may still do a project if they choose, and will be
+considered extra credit.
+
+Students who do the project will also turn in weekly summaries. The
+summaries count towards the homework score. This is separate from the
+project score, which is entirely based on a final submission on the
+day of the last lecture (May 3). Turn in summaries to
+RetroGrade. Upload a file called 'summary.txt' to the current week's
+assignment, and you will be given credit. You also have to send a copy
+to the group's TA, as discussed in class.
+
+What to turn in: make an archive with all your materials. Everything
+in the archive should unpack into a directory. Inside the archive,
+include the following:
+
+* Source code.
+* A file 'group.txt' including:
+	* The name of the group
+    * Names and student IDs of people involved.
+* A file 'introspection.txt' that describes (as a group):
+    * What you set off to achieve
+	* What you actually achieved
+	* What you learned
+	* What was the hardest aspect of the project
+	
+The final project will be submitted to both the group TA and to
+Gabe. The subject line of this email must be `[1300] YourProjectName`
+(obviously, edit to reflect your project's actual name). Send your
+archive along as an attachment.
 
 Plagiarism Detection
 ----------
