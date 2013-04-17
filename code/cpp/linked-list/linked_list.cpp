@@ -68,7 +68,34 @@ void insert(node** head_ptr, int offset, node* new_node) {
 }
 
 void remove(node** head_ptr, int offset) {
-  // implement me
+  if (*head_ptr == NULL) { // empty list
+    return;
+  } else { // non-empty list
+    if (offset == 0) {
+      // remove first thing.
+      node* first = *head_ptr;
+      *head_ptr = first->next; // 2nd thing is new 1st thing
+      delete first; // clean up after yourself
+    } else {
+      // remove something later on in the list.
+      int count = 0;
+      node* cursor = *head_ptr;
+      while (cursor != NULL && count < (offset - 1)) {
+	cursor = cursor->next; // crawl along list by one
+	count = count + 1; // increment actual num followed
+      }
+      if (cursor != NULL && count == (offset - 1)) {
+	// cursor points to doomed node. It could be NULL.
+	if (cursor->next == NULL) {
+	  return; // done.
+	}
+	// cursor->next is not null.
+	node* doomed = cursor->next;
+	cursor->next = cursor->next->next;
+	delete doomed; // clean up after yourself
+      }
+    }
+  }
 }
 
 int size(node* head) {
